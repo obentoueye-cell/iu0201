@@ -14,28 +14,32 @@
         .container { max-width: 480px; margin: 0 auto; background: #fff; }
         img { width: 100%; height: auto; display: block; }
 
-        header { text-align: center; padding: 30px 20px; border-bottom: 1px solid #f8f8f8; }
-        .logo { font-size: 24px; letter-spacing: 5px; color: var(--main); font-weight: 200; margin-bottom: 5px; }
+        header { text-align: center; padding: 30px 20px; }
+        .logo-tag { font-size: 10px; color: var(--main); letter-spacing: 0.3em; margin-bottom: 5px; display: block; }
+        .logo { font-size: 28px; letter-spacing: 5px; color: var(--main); font-weight: 200; }
         
         section { padding: 50px 25px; border-bottom: 1px solid #f9f9f9; }
         .sub-title { font-size: 11px; color: var(--main); letter-spacing: 0.1em; display: block; text-align: center; margin-bottom: 10px; }
         h2 { font-size: 16px; text-align: center; color: var(--main); margin-bottom: 30px; font-weight: normal; letter-spacing: 1px; line-height: 1.6; }
 
         /* 1. HERO */
-        .hero { text-align: center; background: #fff; padding-top: 0; }
-        .hero-text { font-size: 14px; margin: 25px 0; line-height: 1.8; color: #666; font-weight: 300; }
+        .hero { text-align: center; background: #fff; padding-top: 0; border-bottom: none; }
+        .hero-copy { font-size: 15px; margin: 25px 0 10px; line-height: 1.8; color: #333; font-weight: bold; }
+        .hero-sub { font-size: 12px; color: #888; margin-bottom: 25px; display: block; }
         .btn-group { display: flex; flex-direction: column; gap: 10px; padding: 0 20px; }
-        .btn-sub { display: block; padding: 14px; border: 1px solid var(--main); color: var(--main); text-decoration: none; border-radius: 2px; font-size: 12px; }
+        .btn-sub { display: block; padding: 14px; border: 1px solid var(--main); color: var(--main); text-decoration: none; border-radius: 2px; font-size: 12px; transition: 0.3s; }
+        .btn-line-sub { background: #fafafa; color: #06C755; border: 1px solid #06C755; font-weight: bold; }
 
         /* 2. PROBLEMS */
         .check-box { background: #fafafa; padding: 30px 25px; border-radius: 4px; border: 1px solid #f0f0f0; }
         .check-item { font-size: 12px; margin-bottom: 15px; display: flex; align-items: flex-start; color: #666; }
         .check-item::before { content: '✔'; color: var(--main); margin-right: 12px; font-weight: bold; }
 
-        /* 3. VALUES & 4. FIRST TIME */
+        /* 4. FIRST TIME */
         .info-list { list-style: none; padding: 0; text-align: center; }
-        .info-list li { margin-bottom: 15px; font-size: 13px; position: relative; padding-bottom: 15px; border-bottom: 1px dashed #eee; }
+        .info-list li { margin-bottom: 15px; font-size: 13px; position: relative; padding-bottom: 15px; border-bottom: 1px dashed #eee; color: #555; }
         .info-list li:last-child { border-bottom: none; }
+        .info-list li b { color: var(--main); }
 
         /* 5. SLIDER & 6. VOICES */
         .swiper { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; border: 1px solid #eee; overflow: hidden; }
@@ -55,9 +59,9 @@
         .map-area { text-align: center; padding: 40px 0; }
         .google-map { width: 100%; height: 300px; border: 0; margin-bottom: 20px; }
 
-        /* CTA */
+        /* CTA (Sticky Footer) */
         .cta { position: sticky; bottom: 0; width: 100%; padding: 15px 20px; background: rgba(255,255,255,0.95); border-top: 1px solid #eee; z-index: 100; }
-        .btn-line { display: block; background: #06C755; color: #fff; text-align: center; padding: 16px; text-decoration: none; border-radius: 2px; font-weight: bold; font-size: 14px; }
+        .btn-line { display: block; background: #06C755; color: #fff; text-align: center; padding: 16px; text-decoration: none; border-radius: 2px; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(6,199,85,0.2); }
 
         footer { text-align: center; font-size: 10px; color: #aaa; padding: 40px 20px 100px; background: #fafafa; }
     </style>
@@ -69,18 +73,18 @@
         <section class="hero">
             <img src="IMG_3862.jpeg" alt="iu. header">
             <header>
+                <span class="logo-tag">水分を守るまつげ屋さん</span>
                 <div class="logo">iu.</div>
-                <div class="tagline">水分を守るまつげ屋さん</div>
             </header>
-            <div class="hero-text">
+            <div class="hero-copy">
                 【モチが安定しない・片目だけ落ちやすい方へ】<br>
-                乾燥や左右差まで見て整える<br>
-                京都・二条城北のプライベートまつげサロン
+                乾燥や左右差まで見て整える
             </div>
+            <span class="hero-sub">京都・二条城北のプライベートまつげサロン</span>
             <div class="btn-group">
                 <a href="#first" class="btn-sub">はじめての方へ</a>
                 <a href="#menu" class="btn-sub">メニューを見る</a>
-                <a href="https://lin.ee/QMFB5YB" class="btn-sub" style="background: #06C755; color: #fff; border: none; font-weight: bold;">LINE予約する</a>
+                <a href="https://lin.ee/QMFB5YB" class="btn-sub btn-line-sub">LINEで空き状況を確認</a>
             </div>
         </section>
 
@@ -114,6 +118,7 @@
                 <li>しみやすい方もご相談ください</li>
                 <li>カウンセリングしながら進めます</li>
                 <li>無理な提案はしません</li>
+                <li><b>メニューに迷う方は当日相談でOKです</b></li>
             </ul>
         </section>
 
